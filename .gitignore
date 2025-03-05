@@ -1,0 +1,15 @@
+# ignore file for java
+*.class
+*.jar
+
+
+# ignore file system files
+.DS_Store
+Thumbs.db
+
+# ingore intelij files
+.idea
+*.iml
+*.ipr
+*.iws
+
