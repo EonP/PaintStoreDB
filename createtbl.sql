@@ -9,11 +9,117 @@ CONNECT TO COMP421;
 
 -- This is only an example of how you add create table ddls to this file.
 --   You may remove it.
-CREATE TABLE MYTEST01
+CREATE TABLE STORE
 (
-  id INTEGER NOT NULL,
-  value INTEGER 
-  PRIMARY KEY(id)
+    s_id         INTEGER,
+    s_address    VARCHAR(50) NOT NULL,
+    phone_number CHAR(10),
+    manager_id   INTEGER NOT NULL UNIQUE,
+    PRIMARY KEY(s_id)
 );
 
+CREATE TABLE EMPLOYEE
+(
+    e_id   INTEGER,
+    e_name VARCHAR(50),
+    s_id   INTEGER,
+    PRIMARY KEY(e_id)
+    FOREIGN KEY(s_id) REFERENCES STORE(s_id)
+);
 
+-- Add STORE constraint after EMPLOYEE table is created
+ALTER TABLE STORE
+ADD CONTSRAINT FOREIGN KEY(manager_id) REFERENCES EMPLOYEE(e_id);
+
+CREATE TABLE MANUFACTURER
+(
+    m_id   INTEGER,
+    m_name VARCHAR(50),
+    PRIMARY KEY(m_id)
+);
+
+CREATE TABLE PRODUCT
+(
+    p_id                 INTEGER,
+    p_name               VARCHAR(50) NOT NULL,
+    unit_price           DECIMAL(5, 2) NOT NULL,
+    description          VARCHAR(200),
+    discount_pourcentage INTEGER,
+    m_id                 INTEGER NOT NULL,
+    PRIMARY KEY(p_id),
+    FOREIGN KEY(m_id) REFERENCES MANUFACTURER(m_id)
+);
+
+CREATE TABLE PAINT
+(
+    p_id  INTEGER,
+    base  VARCHAR(50),
+    color VARCHAR(50),
+    PRIMARY KEY(p_id),
+    FOREIGN KEY(p_id) REFERENCES PRODUCT(p_id)
+);
+
+CREATE TABLE TOOL
+(
+    p_id INTEGER,
+    type VARCHAR(50),
+    PRIMARY KEY(p_id),
+    FOREIGN KEY(p_id) REFERENCES PRODUCT(p_id)
+);
+
+CREATE TABLE HAS_IN_STOCK
+(
+    p_id     INTEGER,
+    s_id     INTEGER,
+    quantity INTEGER NOT NULL CHECK(quantity >= 0),
+    PRIMARY KEY(p_id, s_id),
+    FOREIGN KEY(p_id) REFERENCES PRODUCT(p_id),
+    FOREIGN KEY(s_id) REFERENCES STORE(s_id)
+);
+
+CREATE TABLE CUSTOMER
+(
+    email     VARCHAR(50),
+    c_name    VARCHAR(50),
+    c_address VARCHAR(50) NOT NULL,
+    PRIMARY KEY(email)
+);
+
+CREATE TABLE PURCHASE
+(
+    p_id     INTEGER,
+    amount   DECIMAL(5, 2) NOT NULL,
+    p_date   DATE NOT NULL,
+    p_time   TIME NOT NULL,
+    PRIMARY KEY(p_id),
+);
+
+CREATE TABLE CONTAINS_PURCHASE
+(
+    purchase_id INTEGER NOT NULL,
+    product_id  INTEGER NOT NULL,
+    quantity    INTEGER NOT NULL CHECK(quantity >= 0),
+    PRIMARY KEY(purchase_id, product_id),
+    FOREIGN KEY(purchase_id) REFERENCES PURCHASE(p_id),
+    FOREIGN KEY(product_id) REFERENCES PRODUCT(p_id)
+);
+
+CREATE TABLE INSTORE
+(
+    p_id INTEGER,
+    e_id INTEGER NOT NULL,
+    PRIMARY KEY(p_id),
+    FOREIGN KEY(p_id) REFERENCES PURCHASE(p_id),
+    FOREIGN KEY(e_id) REFERENCES EMPLOYEE(e_id)
+);
+
+CREATE TABLE ONLINE
+(
+    p_id   INTEGER,
+    rating INTEGER CHECK(rating >= 0 AND rating <= 5 OR rating IS NULL),
+    delivery_fee DECIMAL(5, 2) NOT NULL,
+    email  VARCHAR(50) NOT NULL,
+    PRIMARY KEY(p_id),
+    FOREIGN KEY(p_id) REFERENCES PURCHASE(p_id),
+    FOREIGN KEY(email) REFERENCES CUSTOMER(email)
+);
