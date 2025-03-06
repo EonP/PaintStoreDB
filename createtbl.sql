@@ -23,13 +23,13 @@ CREATE TABLE EMPLOYEE
     e_id   INTEGER NOT NULL,
     e_name VARCHAR(50),
     s_id   INTEGER,
-    PRIMARY KEY(e_id)
+    PRIMARY KEY(e_id),
     FOREIGN KEY(s_id) REFERENCES STORE(s_id)
 );
 
 -- Add STORE constraint after EMPLOYEE table is created
 ALTER TABLE STORE
-ADD CONTSRAINT FOREIGN KEY(manager_id) REFERENCES EMPLOYEE(e_id);
+ADD CONSTRAINT FOREIGN KEY(manager_id) REFERENCES EMPLOYEE(e_id);
 
 CREATE TABLE MANUFACTURER
 (
@@ -70,7 +70,7 @@ CREATE TABLE TOOL
 CREATE TABLE HAS_IN_STOCK
 (
     p_id     INTEGER NOT NULL,
-    s_id     INTEGER,
+    s_id     INTEGER NOT NULL,
     quantity INTEGER NOT NULL CHECK(quantity >= 0),
     PRIMARY KEY(p_id, s_id),
     FOREIGN KEY(p_id) REFERENCES PRODUCT(p_id),
@@ -91,7 +91,7 @@ CREATE TABLE PURCHASE
     amount   DECIMAL(5, 2) NOT NULL,
     p_date   DATE NOT NULL,
     p_time   TIME NOT NULL,
-    PRIMARY KEY(p_id),
+    PRIMARY KEY(p_id)
 );
 
 CREATE TABLE CONTAINS_PURCHASE
