@@ -11,7 +11,7 @@ CONNECT TO COMP421;
 --   You may remove it.
 CREATE TABLE STORE
 (
-    s_id         INTEGER,
+    s_id         INTEGER NOT NULL,
     s_address    VARCHAR(50) NOT NULL,
     phone_number CHAR(10),
     manager_id   INTEGER NOT NULL UNIQUE,
@@ -20,7 +20,7 @@ CREATE TABLE STORE
 
 CREATE TABLE EMPLOYEE
 (
-    e_id   INTEGER,
+    e_id   INTEGER NOT NULL,
     e_name VARCHAR(50),
     s_id   INTEGER,
     PRIMARY KEY(e_id)
@@ -33,14 +33,14 @@ ADD CONTSRAINT FOREIGN KEY(manager_id) REFERENCES EMPLOYEE(e_id);
 
 CREATE TABLE MANUFACTURER
 (
-    m_id   INTEGER,
+    m_id   INTEGER NOT NULL,
     m_name VARCHAR(50),
     PRIMARY KEY(m_id)
 );
 
 CREATE TABLE PRODUCT
 (
-    p_id                 INTEGER,
+    p_id                 INTEGER NOT NULL,
     p_name               VARCHAR(50) NOT NULL,
     unit_price           DECIMAL(5, 2) NOT NULL,
     description          VARCHAR(200),
@@ -52,7 +52,7 @@ CREATE TABLE PRODUCT
 
 CREATE TABLE PAINT
 (
-    p_id  INTEGER,
+    p_id  INTEGER NOT NULL,
     base  VARCHAR(50),
     color VARCHAR(50),
     PRIMARY KEY(p_id),
@@ -61,7 +61,7 @@ CREATE TABLE PAINT
 
 CREATE TABLE TOOL
 (
-    p_id INTEGER,
+    p_id INTEGER NOT NULL,
     type VARCHAR(50),
     PRIMARY KEY(p_id),
     FOREIGN KEY(p_id) REFERENCES PRODUCT(p_id)
@@ -69,7 +69,7 @@ CREATE TABLE TOOL
 
 CREATE TABLE HAS_IN_STOCK
 (
-    p_id     INTEGER,
+    p_id     INTEGER NOT NULL,
     s_id     INTEGER,
     quantity INTEGER NOT NULL CHECK(quantity >= 0),
     PRIMARY KEY(p_id, s_id),
@@ -79,7 +79,7 @@ CREATE TABLE HAS_IN_STOCK
 
 CREATE TABLE CUSTOMER
 (
-    email     VARCHAR(50),
+    email     VARCHAR(50) NOT NULL,
     c_name    VARCHAR(50),
     c_address VARCHAR(50) NOT NULL,
     PRIMARY KEY(email)
@@ -87,7 +87,7 @@ CREATE TABLE CUSTOMER
 
 CREATE TABLE PURCHASE
 (
-    p_id     INTEGER,
+    p_id     INTEGER NOT NULL,
     amount   DECIMAL(5, 2) NOT NULL,
     p_date   DATE NOT NULL,
     p_time   TIME NOT NULL,
@@ -106,7 +106,7 @@ CREATE TABLE CONTAINS_PURCHASE
 
 CREATE TABLE INSTORE
 (
-    p_id INTEGER,
+    p_id INTEGER NOT NULL,
     e_id INTEGER NOT NULL,
     PRIMARY KEY(p_id),
     FOREIGN KEY(p_id) REFERENCES PURCHASE(p_id),
@@ -115,7 +115,7 @@ CREATE TABLE INSTORE
 
 CREATE TABLE ONLINE
 (
-    p_id   INTEGER,
+    p_id   INTEGER NOT NULL,
     rating INTEGER CHECK(rating >= 0 AND rating <= 5 OR rating IS NULL),
     delivery_fee DECIMAL(5, 2) NOT NULL,
     email  VARCHAR(50) NOT NULL,
