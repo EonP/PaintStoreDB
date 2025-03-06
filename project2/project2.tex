@@ -204,5 +204,55 @@
     \caption{Query 5 result}
 \end{figure}
 
+\section{SQL Modifications}
+\subsection*{Mod 1}
+\begin{enumerate}[label=(\alph*)]
+    \item Temporarily increase the price of products that where manufactured by the manufacturer with name that ends with "Industries" by 10\%.
+    \item
+        \begin{lstlisting}
+        UPDATE PRODUCT
+        SET unit_price = unit_price * 1.1
+        WHERE m_id IN (
+            SELECT m_id
+            FROM MANUFACTURER
+            WHERE m_name LIKE '%Industries'
+        );
+        \end{lstlisting}
+    \item
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Mod1.png}
+    \caption{Mod 1 result}
+\end{figure}
+
+\subsection*{Mod 2}
+\begin{enumerate}[label=(\alph*)]
+    \item Merge two manufacturers with the id1 = 1 and id2 = 2 into a new manufacturer with name "m\_name1-m\_name2".
+    \item
+        \begin{lstlisting}
+        -- Step 1: Insert a new manufacturer with the combined name
+        INSERT INTO MANUFACTURER (m_id, m_name)
+        SELECT MAX(m_id) + 1,
+               (SELECT m_name FROM MANUFACTURER WHERE m_id = 1) || '-' || (SELECT m_name FROM MANUFACTURER WHERE m_id = 2)
+        FROM MANUFACTURER;
+
+        -- Step 2: Update products to assign the new manufacturer (with new m_id)
+        UPDATE PRODUCT
+        SET m_id = (SELECT MAX(m_id) FROM MANUFACTURER)
+        WHERE m_id IN (1, 2);
+
+        -- Step 3: Delete the old manufacturers
+        DELETE FROM MANUFACTURER WHERE m_id IN (1, 2);
+        \end{lstlisting}
+
+    \item
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Mod2.png}
+    \caption{Mod 2 result}
+\end{figure}
+
 \end{document}
 
