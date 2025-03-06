@@ -13,3 +13,5 @@ Thumbs.db
 *.ipr
 *.iws
 
+# current log files at root level
+/*.log
