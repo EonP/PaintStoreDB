@@ -1,6 +1,17 @@
 \documentclass[a4paper,11pt]{article}
 
 % Packages
+\usepackage{listings}
+\lstset{
+    breaklines=true, % Break long lines
+    language=SQL, % Set language for syntax highlighting
+    basicstyle=\small, % Set the font size
+    numbers=none, % No line numbers
+    frame=single % Add a frame around the code
+}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{caption}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -71,38 +82,127 @@
 \section{SQL Queries}
 \subsection*{Query 1}
 \begin{enumerate}[label=(\alph*)]
+    \item List the id and address of every store with the respective quantities of the products (with p\_id = 3) they have in stock.
     \item
-    \item
+        \begin{lstlisting}
+        SELECT STORE.s_id, s_address, COALESCE(quantity, 0) AS quantity
+        FROM STORE
+        LEFT JOIN HAS_IN_STOCK
+        ON STORE.s_id = HAS_IN_STOCK.s_id AND HAS_IN_STOCK.p_id = 3
+        ORDER BY STORE.s_id ASC;
+        \end{lstlisting}
     \item
 \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{query1.png}
+    \caption{Query 1 result}
+\end{figure}
 
 \subsection*{Query 2}
 \begin{enumerate}[label=(\alph*)]
+    \item List the total amount of money spent by each customer in the store with id = 1.\\
+        Output should include the customer's email and the total amount of money spent.
     \item
-    \item
+        \begin{lstlisting}
+        SELECT CUSTOMER.email, COALESCE(SUM(amount), 0) AS total_amount
+        FROM CUSTOMER
+        LEFT JOIN ONLINE ON CUSTOMER.email = ONLINE.email
+        LEFT JOIN PURCHASE ON ONLINE.p_id = PURCHASE.p_id
+        LEFT JOIN STORE ON ONLINE.s_id = STORE.s_id
+        GROUP BY CUSTOMER.email
+        ORDER BY email ASC;
+        \end{lstlisting}
     \item
 \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Query2.png}
+    \caption{Query 2 result}
+\end{figure}
 
 \subsection*{Query 3}
 \begin{enumerate}[label=(\alph*)]
+    \item List the id of the biggest in-store purchase made by each store.\\
+        Output should include the store id, address and the purchase amount.
     \item
-    \item
+        \begin{lstlisting}
+        SELECT STORE.s_id, s_address, COALESCE(MAX(amount), 0) AS max_purchase_amount
+        FROM STORE
+        LEFT JOIN EMPLOYEE ON STORE.s_id = EMPLOYEE.s_id
+        LEFT JOIN INSTORE ON EMPLOYEE.e_id = INSTORE.e_id
+        LEFT JOIN PURCHASE ON INSTORE.p_id = PURCHASE.p_id
+        GROUP BY STORE.s_id, s_address
+        ORDER BY STORE.s_id ASC;
+        \end{lstlisting}
     \item
 \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Query3.png}
+    \caption{Query 3 result}
+\end{figure}
 
 \subsection*{Query 4}
 \begin{enumerate}[label=(\alph*)]
+    \item List the id and address of every store and the corresponding money ever spent at that store.
     \item
-    \item
+        \begin{lstlisting}
+        WITH TEMP_INSTORE AS (
+        SELECT STORE.s_id, s_address, COALESCE(SUM(amount), 0) AS total_amount
+            FROM STORE
+            LEFT JOIN EMPLOYEE ON STORE.s_id = EMPLOYEE.s_id
+            LEFT JOIN INSTORE ON EMPLOYEE.e_id = INSTORE.e_id
+            LEFT JOIN PURCHASE ON INSTORE.p_id = PURCHASE.p_id
+            GROUP BY STORE.s_id, s_address
+        ),
+        TEMP\_ONLINE AS (
+            SELECT STORE.s_id, s_address, COALESCE(SUM(amount), 0) AS total_amount
+            FROM STORE
+            LEFT JOIN ONLINE ON STORE.s_id = ONLINE.s_id
+            LEFT JOIN PURCHASE ON ONLINE.p_id = PURCHASE.p_id
+            GROUP BY STORE.s_id, s_address
+        )
+        SELECT TEMP_INSTORE.s_id, TEMP_INSTORE.s_address,
+        TEMP_INSTORE.total_amount + TEMP_ONLINE.total_amount AS total_amount
+        FROM TEMP_INSTORE
+        LEFT JOIN TEMP_ONLINE ON TEMP_INSTORE.s_id = TEMP_ONLINE.s_id
+        ORDER BY TEMP_INSTORE.s_id ASC;
+        \end{lstlisting}
+
     \item
 \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Query4.png}
+    \caption{Query 4 result}
+\end{figure}
 
 \subsection*{Query 5}
 \begin{enumerate}[label=(\alph*)]
+    \item List the Paint products that are in that are in maximum quantity in the store with \\id = 1.
+        List the product id, name and quantity.
     \item
-    \item
+        \begin{lstlisting}
+        WITH TEMP AS (
+            SELECT PRODUCT.p_id, p_name, COALESCE(quantity, 0) AS quantity
+            FROM PAINT
+            LEFT JOIN PRODUCT ON PRODUCT.p_id = PAINT.p_id
+            LEFT JOIN HAS_IN_STOCK ON PRODUCT.p_id = HAS_IN_STOCK.p_id
+            WHERE HAS_IN_STOCK.s_id = 1
+            ORDER BY quantity DESC
+        )
+        SELECT p_id, p_name, quantity
+        FROM TEMP
+        WHERE quantity = (SELECT MAX(quantity) FROM TEMP);
+        \end{lstlisting}
     \item
 \end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Query5.png}
+    \caption{Query 5 result}
+\end{figure}
 
 \end{document}
 
