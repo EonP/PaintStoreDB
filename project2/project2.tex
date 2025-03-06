@@ -59,6 +59,13 @@
 \begin{itemize}
     \item A store should have at least one employee. (TODO: might not be correct as a every store should have a manage which will work there as well)
     \item A purchase should have at least one product.
+    \item Cannot have store manager\_id referencing a row in the Employee table.\\
+        As here we have two tables referencing each other (STORE, EMPLOYEE).\\
+        One of them has to drop the foreign key constraint.
+        % -- Add STORE constraint after EMPLOYEE table is created
+        % ALTER TABLE STORE
+        % ADD CONSTRAINT FK_store_manager FOREIGN KEY(manager_id) REFERENCES EMPLOYEE(e_id);
+
 \end{itemize}
 
 
