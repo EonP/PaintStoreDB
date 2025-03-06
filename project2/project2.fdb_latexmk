@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741239897.45625 "project2.tex" "project2.pdf" "project2" 1741239897.9622 0
+["pdflatex"] 1741241724.48745 "project2.tex" "project2.pdf" "project2" 1741241725.19971 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1136768653 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -53,8 +53,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1736644469.75924 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1736644446 8221421 62cd472a834b1ed419c3a87dae0f4ad9 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "project2.aux" 1741239897.90597 344 314f77517450e13ce37a3555daefa850 "pdflatex"
-  "project2.tex" 1741239896.52222 2522 63a3cfb87d6f4042eb137485c918e2d1 ""
+  "ER.png" 1741241603 190913 a20fac9371e09c9ba4483c51b4f9e54b ""
+  "project2.aux" 1741241725.15628 455 a760fa18ccff53d9922df294885b6f54 "pdflatex"
+  "project2.tex" 1741241722.92557 2641 c9c3b12aaecb1e0ee8dc51567e63a8c7 ""
   (generated)
   "project2.aux"
   "project2.log"
