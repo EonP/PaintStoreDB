@@ -33,9 +33,6 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE EMPLOYEE ( e_id   INTEGER NOT NULL, e_name VARCHAR(50), s_id   INTEGER, PRIMARY KEY(e_id), FOREIGN KEY(s_id) REFERENCES STORE(s_id) )
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 => db2 (cont.) => ALTER TABLE STORE ADD CONSTRAINT FK_store_manager FOREIGN KEY(manager_id) REFERENCES EMPLOYEE(e_id)
-DB20000I  The SQL command completed successfully.
-
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE MANUFACTURER ( m_id   INTEGER NOT NULL, m_name VARCHAR(50), PRIMARY KEY(m_id) )
 DB20000I  The SQL command completed successfully.
 
