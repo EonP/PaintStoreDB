@@ -111,11 +111,13 @@ CREATE TABLE INSTORE
 
 CREATE TABLE ONLINE
 (
-    p_id   INTEGER NOT NULL,
-    rating INTEGER CHECK(rating >= 0 AND rating <= 5 OR rating IS NULL),
+    p_id         INTEGER NOT NULL,
+    rating       INTEGER CHECK(rating >= 0 AND rating <= 5 OR rating IS NULL),
     delivery_fee DECIMAL(5, 2) NOT NULL,
-    email  VARCHAR(50) NOT NULL,
+    email        VARCHAR(50) NOT NULL,
+    s_id         INTEGER NOT NULL,
     PRIMARY KEY(p_id),
     FOREIGN KEY(p_id) REFERENCES PURCHASE(p_id),
-    FOREIGN KEY(email) REFERENCES CUSTOMER(email)
+    FOREIGN KEY(email) REFERENCES CUSTOMER(email),
+    FOREIGN KEY(s_id) REFERENCES STORE(s_id)
 );

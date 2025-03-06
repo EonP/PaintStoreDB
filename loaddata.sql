@@ -417,10 +417,10 @@ INSERT INTO INSTORE (p_id, e_id) VALUES
     (5, 5)    -- Purchase 5: Made in-store by Employee 5
 ;
 
-INSERT INTO ONLINE (p_id, rating, delivery_fee, email) VALUES
-    (6, NULL, 5.99, 'lisa.brown@example.com'),  -- Purchase 6: Made online by customer1 with a rating of 4
-    (7, 5, 3.49, 'michael.wilson@example.com'),  -- Purchase 7: Made online by customer2 with a rating of 5
-    (8, 3, 6.99, 'emily.jones@example.com'),  -- Purchase 8: Made online by customer3 with a rating of 3
-    (9, NULL, 4.99, 'david.miller@example.com'),  -- Purchase 9: Made online by customer4 with a rating of 2
-    (10, NULL, 7.99, 'susan.davis@example.com') -- Purchase 10: Made online by customer5 with no rating
+INSERT INTO ONLINE (p_id, rating, delivery_fee, email, s_id) VALUES
+    (6, NULL, 5.99, 'lisa.brown@example.com', 1),
+    (7, 5, 3.49, 'michael.wilson@example.com', 2),
+    (8, 3, 6.99, 'emily.jones@example.com', 3),
+    (9, NULL, 4.99, 'david.miller@example.com', 4),
+    (10, NULL, 7.99, 'david.miller@example.com', 5) -- david made two purchases online
 ;
