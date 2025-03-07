@@ -258,15 +258,26 @@
 \section{Views}
 
 \subsection*{View 1}
-\begin{enumerate}[label=(\alph*)]
-    \item
-    \item
-    \item
-    \item
-    \item
-    \item
-\end{enumerate}
 
+\begin{enumerate}[label=(\alph*)]
+    \item The view lists the expensive purchases in descending order of amount, where the amount is greater than or equal to 80. 
+    \item 
+        \begin{lstlisting}
+            CREATE VIEW EXPENSIVE_PURCHASES AS
+            SELECT p_id, amount, p_date, p_time
+            FROM PURCHASE
+            WHERE amount >= 80;
+        \end{lstlisting}
+    \item 
+        \includegraphics[width=0.8\textwidth]{View1.png}
+    \item 
+        \includegraphics[width=0.8\textwidth]{View1_d.png}
+    \item 
+        \includegraphics[width=0.8\textwidth]{View1_e.png}
+    \item The insetion was completed successfully. However, it is interesting to not that since the amount 
+    was less than 80, it was not included in the view, and only inserted in the PURCHASE table. 
+    The explanation for this comes from the following DB manual explanation: For views that are not defined with WITH CHECK OPTION, you can insert rows that do not conform to the definition of the view. Those rows cannot appear in the view but are inserted into the base table of the view.
+\end{enumerate}
 
 \subsection*{View 2}
 \begin{enumerate}[label=(\alph*)]
