@@ -67,7 +67,7 @@ CREATE TABLE HAS_IN_STOCK
 (
     p_id     INTEGER NOT NULL,
     s_id     INTEGER NOT NULL,
-    quantity INTEGER NOT NULL CHECK(quantity >= 0),
+    quantity INTEGER NOT NULL,
     PRIMARY KEY(p_id, s_id),
     FOREIGN KEY(p_id) REFERENCES PRODUCT(p_id),
     FOREIGN KEY(s_id) REFERENCES STORE(s_id)
@@ -94,7 +94,7 @@ CREATE TABLE CONTAINS_PURCHASE
 (
     purchase_id INTEGER NOT NULL,
     product_id  INTEGER NOT NULL,
-    quantity    INTEGER NOT NULL CHECK(quantity >= 0),
+    quantity    INTEGER NOT NULL,
     PRIMARY KEY(purchase_id, product_id),
     FOREIGN KEY(purchase_id) REFERENCES PURCHASE(p_id),
     FOREIGN KEY(product_id) REFERENCES PRODUCT(p_id)
@@ -112,7 +112,7 @@ CREATE TABLE INSTORE
 CREATE TABLE ONLINE
 (
     p_id         INTEGER NOT NULL,
-    rating       INTEGER CHECK(rating >= 0 AND rating <= 5 OR rating IS NULL),
+    rating       INTEGER,
     delivery_fee DECIMAL(5, 2) NOT NULL,
     email        VARCHAR(50) NOT NULL,
     s_id         INTEGER NOT NULL,

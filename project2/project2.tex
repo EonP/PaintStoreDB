@@ -47,19 +47,19 @@
     \item \textbf{Paint}(\underline{p\_id}, base, color)\\
         FOREIGN KEY(p\_id) REFERENCES Product(p\_id)
     \item \textbf{Tool}(\underline{p\_id}, type)
-    \item \textbf{Has\_in\_stock}(\underline{p\_id}, \underline{s\_id}, quantity NOT NULL CHECK(quantity $\geq$ 0))\\
+    \item \textbf{Has\_in\_stock}(\underline{p\_id}, \underline{s\_id}, quantity NOT NULL )\\
         FOREIGN KEY(p\_id) REFERENCES Product(p\_id)\\
         FOREIGN KEY(s\_id) REFERENCES Store(s\_id)
     \item \textbf{Customer}(\underline{email}, c\_name, c\_address NOT NULL)\\
         PRIMARY KEY(email)
     \item \textbf{Purchase}(\underline{p\_id}, amount NOT NULL, p\_date NOT NULL, p\_time NOT NULL)
-    \item \textbf{Contains\_purchase}(\underline{p\_id}, \underline{product\_id}, quantity NOT NULL CHECK(quantity $\geq$ 0))\\
+    \item \textbf{Contains\_purchase}(\underline{p\_id}, \underline{product\_id}, quantity NOT NULL)\\
         FOREIGN KEY(p\_id) REFERENCES Purchase(p\_id)\\
         FOREIGN KEY(product\_id) REFERENCES Product(p\_id)
     \item \textbf{Instore}(\underline{p\_id}, \underline{e\_id})\\
         FOREIGN KEY(p\_id) REFERENCES Purchase(p\_id)\\
         FOREIGN KEY(e\_id) REFERENCES Employee(e\_id)
-    \item \textbf{Online}(\underline{p\_id}, rating CHECK(rating $\geq$ 0 AND rating $\leq$ 5 OR rating IS NULL), delivery\_fee NOT NULL, email NOT NULL)\\
+    \item \textbf{Online}(\underline{p\_id}, rating, delivery\_fee NOT NULL, email NOT NULL)\\
         FOREIGN KEY(p\_id) REFERENCES Purchase(p\_id)\\
         FOREIGN KEY(email) REFERENCES Customer(email)
 
@@ -196,7 +196,7 @@
         FROM TEMP
         WHERE quantity = (SELECT MAX(quantity) FROM TEMP);
         \end{lstlisting}
-    \item 
+    \item
 \end{enumerate}
 \begin{figure}[H]
     \centering
@@ -260,32 +260,32 @@
 \subsection*{View 1}
 
 \begin{enumerate}[label=(\alph*)]
-    \item The view lists the expensive purchases in descending order of amount, where the amount is greater than or equal to 80. 
-    \item 
+    \item The view lists the expensive purchases in descending order of amount, where the amount is greater than or equal to 80.
+    \item
         \begin{lstlisting}
             CREATE VIEW EXPENSIVE_PURCHASES AS
             SELECT p_id, amount, p_date, p_time
             FROM PURCHASE
             WHERE amount >= 80;
         \end{lstlisting}
-    \item 
+    \item
         \includegraphics[width=0.8\textwidth]{View1.png}
-    \item 
+    \item
         \includegraphics[width=0.8\textwidth]{View1_d.png}
-    \item 
+    \item
         \includegraphics[width=0.8\textwidth]{View1_e.png}
-    \item The insetion was completed successfully. However, it is interesting to not that since the amount 
-    was less than 80, it was not included in the view, and only inserted in the PURCHASE table. 
+    \item The insertion was completed successfully. However, it is interesting to not that since the amount
+    was less than 80, it was not included in the view, and only inserted in the PURCHASE table.
     The explanation for this comes from the following DB manual explanation: For views that are not defined with WITH CHECK OPTION, you can insert rows that do not conform to the definition of the view. Those rows cannot appear in the view but are inserted into the base table of the view.
 \end{enumerate}
 
 \subsection*{View 2}
 \begin{enumerate}[label=(\alph*)]
     \item This view provides a summary of total amount spent on online purchases by each customer.
-    \item 
+    \item
     \begin{lstlisting}
         CREATE VIEW CUSTOMER_ONLINE_SPENDING AS
-        SELECT 
+        SELECT
             Customer.email,
             Customer.c_name,
             COALESCE(SUM(Purchase.amount), 0) AS total_spent
@@ -294,14 +294,14 @@
         JOIN Purchase ON Online.p_id = Purchase.p_id
         GROUP BY Customer.email, Customer.c_name;
     \end{lstlisting}
-    \item 
+    \item
         \includegraphics[width=0.8\textwidth]{View2.png}
     \item
         \includegraphics[width=0.8\textwidth]{View2_d.png}
     \item
         \includegraphics[width=0.8\textwidth]{View2_e.png}
-    \item The insert failed with SQLSTATE 42808. The manual states: 
-    Individual columns in a view cannot be updated if the column is derived from an SQL function, an arithmetic expression, or a constant. 
+    \item The insert failed with SQLSTATE 42808. The manual states:
+    Individual columns in a view cannot be updated if the column is derived from an SQL function, an arithmetic expression, or a constant.
     The TOTAL\_SPENT column is derived from the SUM function, so it cannot be updated.
 \end{enumerate}
 
@@ -309,18 +309,30 @@
 \section{Check Constraints}
 \subsection*{Check 1}
 \begin{enumerate}[label=(\alph*)]
+    \item The base attribute in the PAINT table should be one of the following: "Gloss", "Matte".
     \item
+    \begin{lstlisting}
+        ALTER TABLE PAINT
+        ADD CONSTRAINT base_check CHECK (base IN ('Gloss', 'Matte'));
+    \end{lstlisting}
     \item
+        \includegraphics[width=0.8\textwidth]{Check1_c.png}
     \item
-    \item
+        \includegraphics[width=0.8\textwidth]{Check1_d.png}
 \end{enumerate}
 
 \subsection*{Check 2}
 \begin{enumerate}[label=(\alph*)]
+    \item The rating attribute in the ONLINE table should be between 1 and 5 if present otherwise NULL.
     \item
+    \begin{lstlisting}
+        ALTER TABLE ONLINE
+        ADD CONSTRAINT rating_check CHECK (rating BETWEEN 1 AND 5 OR rating IS NULL);
+    \end{lstlisting}
     \item
+        \includegraphics[width=0.8\textwidth]{Check2_c.png}
     \item
-    \item
+        \includegraphics[width=0.8\textwidth]{Check2_d.png}
 \end{enumerate}
 
 \section{Creativity}
@@ -328,9 +340,9 @@
 \section{Work Division}
 We had two meetings to discuss the project and the work division. We decided to divide the work as follows:
 \begin{itemize}
-    \item Ahmed Tlili: questions 4, 5, 6
+    \item Ahmed Tlili: Relational Schema, questions 4, 5, 6
     \item Leon Petrinos: Relational Schema, question 3, 7, 9
-    \item Mathilde Peruzzo: ER Diagram, questions 7, 9
+    \item Mathilde Peruzzo: ER Diagram, questions 7, 8, 9
 \end{itemize}
 
 \end{document}
