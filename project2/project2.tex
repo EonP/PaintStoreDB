@@ -196,7 +196,7 @@
         FROM TEMP
         WHERE quantity = (SELECT MAX(quantity) FROM TEMP);
         \end{lstlisting}
-    \item
+    \item 
 \end{enumerate}
 \begin{figure}[H]
     \centering
@@ -281,13 +281,30 @@
 
 \subsection*{View 2}
 \begin{enumerate}[label=(\alph*)]
+    \item This view provides a summary of total amount spent on online purchases by each customer.
+    \item 
+    \begin{lstlisting}
+        CREATE VIEW CUSTOMER_ONLINE_SPENDING AS
+        SELECT 
+            Customer.email,
+            Customer.c_name,
+            COALESCE(SUM(Purchase.amount), 0) AS total_spent
+        FROM Customer
+        JOIN Online ON Customer.email = Online.email
+        JOIN Purchase ON Online.p_id = Purchase.p_id
+        GROUP BY Customer.email, Customer.c_name;
+    \end{lstlisting}
+    \item 
+        \includegraphics[width=0.8\textwidth]{View2.png}
     \item
+        \includegraphics[width=0.8\textwidth]{View2_d.png}
     \item
-    \item
-    \item
-    \item
-    \item
+        \includegraphics[width=0.8\textwidth]{View2_e.png}
+    \item The insert failed with SQLSTATE 42808. The manual states: 
+    Individual columns in a view cannot be updated if the column is derived from an SQL function, an arithmetic expression, or a constant. 
+    The TOTAL\_SPENT column is derived from the SUM function, so it cannot be updated.
 \end{enumerate}
+
 
 \section{Check Constraints}
 \subsection*{Check 1}

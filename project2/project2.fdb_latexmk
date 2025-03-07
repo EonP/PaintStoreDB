@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1741347656.5654 "/Users/leonpetrinos/Desktop/PaintStoreDB/project2/project2.tex" "project2.pdf" "project2" 1741347658.7289 0
-  "/Users/leonpetrinos/Desktop/PaintStoreDB/project2/project2.tex" 1741347655.13925 11259 3e5761e2278aa27e202008fd4195a78e ""
+["pdflatex"] 1741353089.36733 "/Users/leonpetrinos/Desktop/PaintStoreDB/project2/project2.tex" "project2.pdf" "project2" 1741353091.79918 0
+  "/Users/leonpetrinos/Desktop/PaintStoreDB/project2/project2.tex" 1741353088.77216 12217 bd12b037cfa7bc15fc1f387bdb5f786e ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1741344772.23469 257736 76236fbb88cdff087d33a22d0cdafc1a ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1725919329.82714 11548 daa06c41e1740e9ab9ff0faf05960a70 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1727400590.89579 12668 250aa4305f8bd3b17df54abe14a3acad ""
@@ -79,8 +79,11 @@
   "View1.png" 1741347579.17917 134593 ad3498c543b1137924cbdc07a9725320 ""
   "View1_d.png" 1741347586.99664 211053 13ee31526525c9b7d06301a23f8407b2 ""
   "View1_e.png" 1741347583.44541 105221 ec85f62c320e39367c467b55bafe51b7 ""
-  "project2.aux" 1741347658.62478 1871 a044d197407019ffdab3336f1dbd0eb9 "pdflatex"
-  "project2.tex" 1741347655.13925 11259 3e5761e2278aa27e202008fd4195a78e ""
+  "View2.png" 1741348841.49836 299023 420ba3446b62256a5a45dd5ccb32fa0c ""
+  "View2_d.png" 1741349257.20585 230789 aa1a14c6bfce2c4de393ca7f822cff6b ""
+  "View2_e.png" 1741349678.53789 204381 6efe2acdd197b495f52538e45d158fb3 ""
+  "project2.aux" 1741353091.68909 1871 0e7c88e2c6f6e92ab5400f24e54cb775 "pdflatex"
+  "project2.tex" 1741353088.77216 12217 bd12b037cfa7bc15fc1f387bdb5f786e ""
   "query1.png" 1741347553.23825 279279 c199f836233bf06d87076cee28389ec7 ""
   (generated)
   "project2.aux"
