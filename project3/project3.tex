@@ -1,0 +1,64 @@
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage{listings}
+\lstset{
+    breaklines=true, % Break long lines
+    language=SQL, % Set language for syntax highlighting
+    basicstyle=\small, % Set the font size
+    numbers=none, % No line numbers
+    frame=single % Add a frame around the code
+}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{a4paper, margin=1in}
+
+% Title and Author
+\title{Project 3}
+\author{Ahmed Tlili, Leon Petrinos, Mathilde Peruzzo}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Relational Schema}
+\begin{itemize}
+    \item \textbf{Store}(\underline{s\_id}, s\_address, phone\_number, manager\_id UNIQUE NOT NULL)\\
+        FOREIGN KEY(manager\_id) REFERENCES Employee(employee\_id)
+    \item \textbf{Employee}(\underline{e\_id}, e\_name, s\_id)\\
+        FOREIGN KEY(s\_id) REFERENCES Store(s\_id)
+    \item \textbf{Manufacturer}(\underline{m\_id}, m\_name)
+    \item \textbf{Product}(\underline{p\_id}, p\_name NOT NULL, unit\_price NOT NULL, description,\\ discount\_percentage, m\_id NOT NULL)\\
+        FOREIGN KEY(m\_id) REFERENCES Manufacturer(m\_id)
+    \item \textbf{Paint}(\underline{p\_id}, base, color)\\
+        FOREIGN KEY(p\_id) REFERENCES Product(p\_id)
+    \item \textbf{Tool}(\underline{p\_id}, type)
+    \item \textbf{Has\_in\_stock}(\underline{p\_id}, \underline{s\_id}, quantity NOT NULL )\\
+        FOREIGN KEY(p\_id) REFERENCES Product(p\_id)\\
+        FOREIGN KEY(s\_id) REFERENCES Store(s\_id)
+    \item \textbf{Customer}(\underline{email}, c\_name, c\_address NOT NULL)\\
+        PRIMARY KEY(email)
+    \item \textbf{Purchase}(\underline{p\_id}, amount NOT NULL, p\_date NOT NULL, p\_time NOT NULL)
+    \item \textbf{Contains\_purchase}(\underline{p\_id}, \underline{product\_id}, quantity NOT NULL)\\
+        FOREIGN KEY(p\_id) REFERENCES Purchase(p\_id)\\
+        FOREIGN KEY(product\_id) REFERENCES Product(p\_id)
+    \item \textbf{Instore}(\underline{p\_id}, \underline{e\_id})\\
+        FOREIGN KEY(p\_id) REFERENCES Purchase(p\_id)\\
+        FOREIGN KEY(e\_id) REFERENCES Employee(e\_id)
+    \item \textbf{Online}(\underline{p\_id}, rating, delivery\_fee NOT NULL, email NOT NULL)\\
+        FOREIGN KEY(p\_id) REFERENCES Purchase(p\_id)\\
+        FOREIGN KEY(email) REFERENCES Customer(email)
+\end{itemize}
+
+\section{Introduction}
+This is an example LaTeX template.
+
+\end{document}
+
