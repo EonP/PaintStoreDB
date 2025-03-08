@@ -28,7 +28,7 @@ public class Q9 {
                 String domain = domains.get(rdm.nextInt(domains.size()));
                 String email = STR."\{firstName.toLowerCase()}.\{lastName.toLowerCase()}\{domain}";
 
-                wCustomers.write(STR."INSERT INTO customer VALUES(\{email}, '\{firstName} \{lastName}', '\{address}');\n");
+                wCustomers.write(STR."INSERT INTO customer VALUES('\{email}', '\{firstName} \{lastName}', '\{address}');\n");
             }
         } catch (IOException e) {}
     }
