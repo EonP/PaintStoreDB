@@ -153,7 +153,7 @@
             LEFT JOIN PURCHASE ON INSTORE.p_id = PURCHASE.p_id
             GROUP BY STORE.s_id, s_address
         ),
-        TEMP\_ONLINE AS (
+        TEMP_ONLINE AS (
             SELECT STORE.s_id, s_address, COALESCE(SUM(amount), 0) AS total_amount
             FROM STORE
             LEFT JOIN ONLINE ON STORE.s_id = ONLINE.s_id
