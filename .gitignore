@@ -1,7 +1,7 @@
 # ignore file for java
 *.class
 *.jar
-
+/out
 
 # ignore file system files
 .DS_Store
