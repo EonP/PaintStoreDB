@@ -28,7 +28,7 @@
 
 \maketitle
 
-\section{Relational Schema}
+\section*{Relational Schema}
 \begin{itemize}
     \item \textbf{Store}(\underline{s\_id}, s\_address, phone\_number, manager\_id UNIQUE NOT NULL)\\
         FOREIGN KEY(manager\_id) REFERENCES Employee(employee\_id)
@@ -57,23 +57,49 @@
         FOREIGN KEY(email) REFERENCES Customer(email)
 \end{itemize}
 
-\section{Stored Procedure}
+\section*{Stored Procedure}
 
-\section{Application Program}
+\section*{Application Program}
 
-\section{Indexing}
+\section*{Indexing}
 
-\subsection{Index 1}
+\subsection*{Index 1}
 
-\subsection{Index 2}
+\begin{enumerate}[label=(\alph*)]
+    \item \includegraphics[width=0.9\textwidth]{images/idx1.png}
+    \item A clustered index on purchase date in the Purchase table is beneficial because purchases are frequently analyed based on dates and date ranges. 
+    Thus, sorting the purchases by date allows for efficient range queries, making it faster to access data for accounting purposes.
+    An example query that would benefit from this index is the following:
+    \begin{lstlisting}
+        SELECT SUM(amount) AS total 
+        FROM Purchase 
+        WHERE p_date >= '01/01/2025' AND p_date <= '12/31/2025';
+    \end{lstlisting}
+    This above query computes the total revenue for the year 2025. With this clustered index, the database can quickly locate the first matching row, and perform a sequential scan to retrieve all rows within the specified date range, without needing to follow the pointers of other data entries (value + rid), as in a non-clustered index, which could often leed to more IO.
+\end{enumerate} 
 
-\section{Visualisation}
+\subsection*{Index 2}
+\begin{enumerate}[label=(\alph*)]
+    \item \includegraphics[width=0.9\textwidth]{images/idx2.png}
+    \item This index is on the s\_id and quantity attribute of the Has\_in\_stock table. 
+    It is useful for this application to efficiently identify products that are running low in stock in a specific store, which is crucial for inventory management.
+    An example query that would benefit from this index is the following: 
+    \begin{lstlisting}
+        SELECT p_id 
+        FROM Has_in_stock 
+        WHERE s_id = 0 AND quantity < 5;
+    \end{lstlisting}
+    This query identifies all products of a particular store where the quantity of the product is very limited.
+    The fact that it is a clustered index, again, allows for efficient range queries, making it faster to access data for inventory management purposes.
+    It also makes sense to use a clustered index because the other attributes of the table are id's, which are certainly not needed in a sorted order. 
+\end{enumerate}
+\section*{Visualisation}
 
-\subsection{Vis 1}
+\subsection*{Vis 1}
 
-\subsection{Vis 2}
+\subsection*{Vis 2}
 
-\section{Creativity}
+\section*{Creativity}
 
 
 \end{document}

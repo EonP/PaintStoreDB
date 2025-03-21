@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1742520619.05758 "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" "project3.pdf" "project3" 1742520619.60183 0
-  "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" 1742520618.4947 4674 9b25bb341740c9d23cebbcadc27fd864 ""
+["pdflatex"] 1742516746.42314 "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" "project3.pdf" "project3" 1742516746.94826 2
+  "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" 1742516744.85791 2868 cc78485a96ca34d368ee80a727d98f52 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1741344772.23469 257736 76236fbb88cdff087d33a22d0cdafc1a ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1727400590.89579 12668 250aa4305f8bd3b17df54abe14a3acad ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1725919255.61631 21088897 61439be112e7617c37ddfd21e9465f2a ""
@@ -25,6 +25,7 @@
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1725918643.97163 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1725918643.97279 32080 340ef9bf63678554ee606688e7b5339d ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1725918643.99235 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1725918643.99944 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1725918644.00335 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1725918644.00458 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1725918644.0058 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -39,7 +40,6 @@
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amstext.sty" 1725918644.30346 2444 71618ea5f2377e33b04fb97afdd0eac2 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls" 1725918665.1827 20144 67a5f8e0f9e445e8ec6834e595cebdc9 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/inputenc.sty" 1725918665.19135 5048 7ebf0f2edf1ef6783e8fe2201a95d0e8 ""
-  "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd" 1725918665.16943 2470 ec0f30a4dee212b06d8724b94d7d4f9a ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size11.clo" 1725918665.18716 8464 6b4d01be31907866396cf4ac23881d2d ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption/caption.sty" 1731690712.43445 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/caption/caption3.sty" 1731690712.43565 72619 ee90b6612147680fd73c3b1406a74245 ""
@@ -61,10 +61,8 @@
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstmisc.sty" 1725918661.21197 77023 71dc8ec77fb5648c3af15ec4b791f591 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstpatch.sty" 1725918661.22265 353 9024412f43e92cd5b21fe9ded82d0610 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/placeins/placeins.sty" 1741344771.37481 4087 636308456f60d2b31cbf97867db5708d ""
-  "images/idx1.png" 1742516787.26279 44475 aac42bc31612780f5045a6099d4d7ad6 ""
-  "images/idx2.png" 1742520471.78019 45041 550ea1e6c43a86aa16883762990d2d41 ""
-  "project3.aux" 1742520619.5158 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "project3.tex" 1742520618.4947 4674 9b25bb341740c9d23cebbcadc27fd864 ""
+  "project3.aux" 1742516746.84911 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+  "project3.tex" 1742516744.85791 2868 cc78485a96ca34d368ee80a727d98f52 ""
   (generated)
   "project3.aux"
   "project3.log"
