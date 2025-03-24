@@ -60,8 +60,10 @@
 \section*{Stored Procedure}
 
 \begin{enumerate}[label=(\alph*)]
-    \item This stored procedure increases the discount of products that havn't been sold in the past year. The discount is increased by 10\%, but the maximum discount is 50\%.
-    So a product that already has a 45\% discount will get a 5\% discout. The input parameter is the maximum discount.
+    \item This stored procedure increases the discount of products that have never been sold by 10\% until the maximum discount is reached. Maximum discount is the input argument.
+    If the current discount is already greater or equal to the maximum discount, the discount will not be increased.
+    If when increasing the current discount, the maximum discount is reached surpassed, the discount will be set to the maximum discount (no more).
+    Otherwise, the current discount will be increased by 10\%.
     \item
     \begin{lstlisting}
     CREATE OR REPLACE PROCEDURE DiscountInactiveProducts(IN max_discount INT)
@@ -83,18 +85,11 @@
     
         WHILE done = 0 DO
 
-            IF (EXISTS (
-                SELECT 1 
-                FROM Contains_purchase
-                WHERE product_id = current_pid
-            ) AND NOT EXISTS (
+            IF (NOT EXISTS (
                 SELECT 1
-                FROM Contains_purchase cp
-                JOIN Purchase pur
-                ON cp.product_id = pur.p_id
-                WHERE cp.product_id = current_pid
-                    AND pur.p_date >= CURRENT DATE - 6 MONTHS
-            )) 
+                FROM Contains_purchase
+                WHERE product_id = current_pid)
+            )
             THEN
                 IF (current_discount + 10 > max_discount) THEN
                     SET current_discount = max_discount;
@@ -114,15 +109,14 @@
         CLOSE product_cursor;
     END
     \end{lstlisting}
-
-    \item d
+    \item 
 \end{enumerate}
-Calling the procedure\\
+Calling the procedure with maximum discount of 25\%\\
 \includegraphics*[width=\textwidth]{images/call_to_procedure.png}
-First 25 before calling procedure:\\
+First 25 products (id and discount) before calling procedure:\\
 \includegraphics*[width=\textwidth]{images/products_before.png}
-Products with ids less than 25 after calling procedure:\\
-\includegraphics*[width=\textwidth]{images/updated_table_after_procedure_call.png}
+First 25 products (id and discount) after calling procedure. Note that the products with id 1 to 20 have purchases, so only the discounts from 21 to 25 change. \\
+\includegraphics*[width=\textwidth]{images/products_after.png}
 
 \section*{Application Program}
 The application handles all the errors gracefully.\\

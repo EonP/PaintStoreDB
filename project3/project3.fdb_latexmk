@@ -1,11 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1742842558.21163 "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" "project3.pdf" "project3" 1742842559.88023 0
-  "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" 1742842557.63441 9842 b57b9c1e648cfbfdf400ee888ef95296 ""
+["pdflatex"] 1742844026.99306 "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" "project3.pdf" "project3" 1742844028.66165 0
+  "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" 1742844026.39796 9909 ac29de6104cde7f538ebc362e1221c1f ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1741344772.23469 257736 76236fbb88cdff087d33a22d0cdafc1a ""
-  "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1725919329.82714 11548 daa06c41e1740e9ab9ff0faf05960a70 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1727400590.89579 12668 250aa4305f8bd3b17df54abe14a3acad ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1725919255.61631 21088897 61439be112e7617c37ddfd21e9465f2a ""
-  "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1725918657.588 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1725918657.58814 1460 8005ce585ff351dff78998923504da5e ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1725918643.95831 1004 54797486969f23fa377b128694d548df ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1725918643.95848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -81,10 +79,10 @@
   "images/menu_option_6_2.png" 1742840371.13345 103024 a16de94413d2d0191c03f485c7cb809b ""
   "images/menu_option_7_1.png" 1742840371.13398 98864 44ee03c1dc4cb42cb3db45358b97aa63 ""
   "images/menu_option_7_2.png" 1742840371.13472 173519 4a3da9fdc21b42ad39ad0d9c9db64be0 ""
-  "images/products_before.png" 1742837254.51558 150796 58d02a754a42e3e88724d6800a314553 ""
-  "images/updated_table_after_procedure_call.png" 1742838002.87008 147159 7ea03d79e19125b4f6a7e610fb7018d2 ""
-  "project3.aux" 1742842559.77418 32 1b174032087fb90900fa6203d3bb0a7e "pdflatex"
-  "project3.tex" 1742842557.63441 9842 b57b9c1e648cfbfdf400ee888ef95296 ""
+  "images/products_after.png" 1742843709.76158 153274 7457f97f70eebd4598d4aa15cb7a3b7e ""
+  "images/products_before.png" 1742843706.76514 151206 528de9eff728e9679beb059058272c16 ""
+  "project3.aux" 1742844028.54521 32 1b174032087fb90900fa6203d3bb0a7e "pdflatex"
+  "project3.tex" 1742844026.39796 9909 ac29de6104cde7f538ebc362e1221c1f ""
   (generated)
   "project3.aux"
   "project3.log"
