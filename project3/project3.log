@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.11)  24 MAR 2025 12:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.11)  24 MAR 2025 14:22
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/tliliahmed/Database Systems /Project 2:3/Project/project3/project3.te
-x"
-(/Users/tliliahmed/Database Systems /Project 2:3/Project/project3/project3.tex
+**project3.tex
+(./project3.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -23,9 +23,7 @@ File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
@@ -41,39 +39,31 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \lst@newlines=\count266
 \lst@lineno=\count267
 \lst@maxwidth=\dimen144
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 \c@lstnumber=\count268
 \lst@skipnumbers=\count269
 \lst@framebox=\box52
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/placeins/placeins.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count270
 \float@exts=\toks19
 \float@box=\box53
 \@float@everytoks=\toks20
 \@floatcapt=\box54
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen145
 \captionmargin=\dimen146
@@ -89,30 +79,25 @@ Package caption Info: Standard document class detected.
 \c@continuedfloat=\count272
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
 \ex@=\dimen153
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen154
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count273
@@ -162,34 +147,26 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+ (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count285
@@ -204,8 +181,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen170
 \Gm@layoutvoffset=\dimen171
 \Gm@dimlist=\toks28
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip53
 \enit@outerparindent=\dimen172
@@ -213,13 +189,11 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box57
 \enit@count@id=\count288
 \enitdp@description=\count289
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count290
 \l__pdf_internal_box=\box58
-)
-(./project3.aux)
+) (./project3.aux)
 \openout1 = `project3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -239,8 +213,7 @@ LaTeX Font Info:    ... okay on input line 27.
 \c@lstlisting=\count291
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count292
 \scratchdimen=\dimen173
@@ -255,12 +228,9 @@ Package caption Info: End \AtBeginDocument code.
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -298,53 +268,122 @@ e
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
-al/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 7
-6.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 76.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 76.
-<images/idx1.png, id=12, 867.24pt x 55.20625pt>
+<images/menu.png, id=12, 713.66624pt x 256.96pt>
+File: images/menu.png Graphic file (type png)
+<use images/menu.png>
+Package pdftex.def Info: images/menu.png  used on input line 119.
+(pdftex.def)             Requested size: 407.66833pt x 146.78238pt.
+ [2]
+<images/menu_option_1_1.png, id=19, 648.4225pt x 226.8475pt>
+File: images/menu_option_1_1.png Graphic file (type png)
+<use images/menu_option_1_1.png>
+Package pdftex.def Info: images/menu_option_1_1.png  used on input line 125.
+(pdftex.def)             Requested size: 407.66833pt x 142.62392pt.
+<images/menu_option_1_2.png, id=20, 499.8675pt x 344.28625pt>
+File: images/menu_option_1_2.png Graphic file (type png)
+<use images/menu_option_1_2.png>
+Package pdftex.def Info: images/menu_option_1_2.png  used on input line 127.
+(pdftex.def)             Requested size: 407.66833pt x 280.79306pt.
+<images/menu_option_2_1.png, id=21, 626.34pt x 223.83624pt>
+File: images/menu_option_2_1.png Graphic file (type png)
+<use images/menu_option_2_1.png>
+Package pdftex.def Info: images/menu_option_2_1.png  used on input line 129.
+(pdftex.def)             Requested size: 407.66833pt x 145.69334pt.
+<images/menu_option_2_2.png, id=22, 415.5525pt x 151.56625pt>
+File: images/menu_option_2_2.png Graphic file (type png)
+<use images/menu_option_2_2.png>
+Package pdftex.def Info: images/menu_option_2_2.png  used on input line 132.
+(pdftex.def)             Requested size: 407.66833pt x 148.69579pt.
+ [3 <./images/menu.png> <./images/menu_option_1_1.png> <./images/menu_option_1_2.png>]
+<images/menu_option_3_1.png, id=29, 691.58376pt x 239.89626pt>
+File: images/menu_option_3_1.png Graphic file (type png)
+<use images/menu_option_3_1.png>
+Package pdftex.def Info: images/menu_option_3_1.png  used on input line 134.
+(pdftex.def)             Requested size: 407.66833pt x 141.4131pt.
+<images/menu_option_3_2.png, id=30, 1361.085pt x 229.85875pt>
+File: images/menu_option_3_2.png Graphic file (type png)
+<use images/menu_option_3_2.png>
+Package pdftex.def Info: images/menu_option_3_2.png  used on input line 137.
+(pdftex.def)             Requested size: 407.66833pt x 68.84592pt.
+<images/menu_option_4_1.png, id=31, 635.37375pt x 243.91125pt>
+File: images/menu_option_4_1.png Graphic file (type png)
+<use images/menu_option_4_1.png>
+Package pdftex.def Info: images/menu_option_4_1.png  used on input line 139.
+(pdftex.def)             Requested size: 407.66833pt x 156.50461pt.
+<images/menu_option_4_2.png, id=32, 514.92375pt x 151.56625pt>
+File: images/menu_option_4_2.png Graphic file (type png)
+<use images/menu_option_4_2.png>
+Package pdftex.def Info: images/menu_option_4_2.png  used on input line 142.
+(pdftex.def)             Requested size: 407.66833pt x 119.99966pt.
+ [4 <./images/menu_option_2_1.png> <./images/menu_option_2_2.png> <./images/menu_option_3_1.png> <./images/menu_option_3_2.png>]
+<images/menu_option_5_1.png, id=40, 679.53876pt x 227.85126pt>
+File: images/menu_option_5_1.png Graphic file (type png)
+<use images/menu_option_5_1.png>
+Package pdftex.def Info: images/menu_option_5_1.png  used on input line 144.
+(pdftex.def)             Requested size: 407.66833pt x 136.69093pt.
+<images/menu_option_5_2.png, id=41, 724.7075pt x 237.88875pt>
+File: images/menu_option_5_2.png Graphic file (type png)
+<use images/menu_option_5_2.png>
+Package pdftex.def Info: images/menu_option_5_2.png  used on input line 148.
+(pdftex.def)             Requested size: 407.66833pt x 133.81934pt.
+<images/menu_option_6_1.png, id=42, 647.41875pt x 256.96pt>
+File: images/menu_option_6_1.png Graphic file (type png)
+<use images/menu_option_6_1.png>
+Package pdftex.def Info: images/menu_option_6_1.png  used on input line 150.
+(pdftex.def)             Requested size: 407.66833pt x 161.80331pt.
+<images/menu_option_6_2.png, id=43, 532.99126pt x 324.21124pt>
+File: images/menu_option_6_2.png Graphic file (type png)
+<use images/menu_option_6_2.png>
+Package pdftex.def Info: images/menu_option_6_2.png  used on input line 152.
+(pdftex.def)             Requested size: 407.66833pt x 247.98616pt.
+ [5 <./images/menu_option_4_1.png> <./images/menu_option_4_2.png> <./images/menu_option_5_1.png> <./images/menu_option_5_2.png>]
+<images/menu_option_7_1.png, id=51, 635.37375pt x 242.9075pt>
+File: images/menu_option_7_1.png Graphic file (type png)
+<use images/menu_option_7_1.png>
+Package pdftex.def Info: images/menu_option_7_1.png  used on input line 154.
+(pdftex.def)             Requested size: 407.66833pt x 155.86055pt.
+<images/menu_option_7_2.png, id=52, 1499.6025pt x 340.27126pt>
+File: images/menu_option_7_2.png Graphic file (type png)
+<use images/menu_option_7_2.png>
+Package pdftex.def Info: images/menu_option_7_2.png  used on input line 156.
+(pdftex.def)             Requested size: 407.66833pt x 92.5027pt.
+ [6 <./images/menu_option_6_1.png> <./images/menu_option_6_2.png> <./images/menu_option_7_1.png>]
+<images/idx1.png, id=59, 867.24pt x 55.20625pt>
 File: images/idx1.png Graphic file (type png)
 <use images/idx1.png>
-Package pdftex.def Info: images/idx1.png  used on input line 123.
+Package pdftex.def Info: images/idx1.png  used on input line 164.
 (pdftex.def)             Requested size: 407.66833pt x 25.95114pt.
- [2]
-<images/idx2.png, id=19, 867.24pt x 55.20625pt>
+<images/idx2.png, id=60, 867.24pt x 55.20625pt>
 File: images/idx2.png Graphic file (type png)
 <use images/idx2.png>
-Package pdftex.def Info: images/idx2.png  used on input line 137.
+Package pdftex.def Info: images/idx2.png  used on input line 178.
 (pdftex.def)             Requested size: 407.66833pt x 25.95114pt.
- [3 <./images/idx1.png> <./images/idx2.png>] (./project3.aux)
+ [7 <./images/menu_option_7_2.png> <./images/idx1.png> <./images/idx2.png>] [8] (./project3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6303 strings out of 474116
- 99029 string characters out of 5743682
+ 6407 strings out of 474116
+ 102207 string characters out of 5743682
  2116187 words of memory out of 5000000
- 28628 multiletter control sequences out of 15000+600000
+ 28733 multiletter control sequences out of 15000+600000
  565122 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,474b,1956s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on project3.pdf (3 pages, 156146 bytes).
+ 57i,6n,65p,407b,1956s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on project3.pdf (8 pages, 901594 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
