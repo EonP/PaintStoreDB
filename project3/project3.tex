@@ -60,8 +60,9 @@
 \section*{Stored Procedure}
 
 \begin{enumerate}[label=(\alph*)]
-    \item This stored procedure increases the discount of products that havn't been sold in the past year. The discount is increased by 10\%, but the maximum discount is 50\%. 
-    So a product that already has a 45\% discount will get a 5\% discout. The input parameter is the maximum discount.
+    \item This stored procedure increases the discount of products that havn't been sold in the past year by 10\%. The maximum discount is however a parameter to the procedure. 
+    For example, if the maximum discount is 25\%, a product that already more than a 15\% discount (and less than 25\%) will have its discount updated to 25\%, not more. 
+    Otherwise a product that has less than 15\% discount will get a 10\% discount increase.
     \item 
     \begin{lstlisting}
     CREATE OR REPLACE PROCEDURE DiscountInactiveProducts(IN max_discount INT)
@@ -87,7 +88,7 @@
                 SELECT 1
                 FROM Contains_purchase cp
                 JOIN Purchase pur 
-                ON cp.p_id = pur.p_id
+                ON cp.purchase_id = pur.p_id
                 WHERE cp.product_id = current_pid
                     AND pur.p_date >= CURRENT DATE - 6 MONTHS
             ) THEN
@@ -110,7 +111,9 @@
     END
     \end{lstlisting}
     
-    \item d
+    \item Calling the procedure: 
+    Products with ids less than 25 before calling procedure: 
+    Products with ids less than 25 after calling procedure:
 \end{enumerate}
 
 \section*{Application Program}
