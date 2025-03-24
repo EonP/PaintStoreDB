@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742840556.18099 "project3.tex" "project3.pdf" "project3" 1742840557.78497 0
+["pdflatex"] 1742841378.16687 "project3.tex" "project3.pdf" "project3" 1742841379.97285 0
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -65,6 +65,7 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1736644469.75924 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1736644446 8221421 62cd472a834b1ed419c3a87dae0f4ad9 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
+  "images/call_to_procedure.png" 1742837694.29678 27116 3faa074f7cf46bbebc16687b89546fd9 ""
   "images/idx1.png" 1742834908.18102 44475 aac42bc31612780f5045a6099d4d7ad6 ""
   "images/idx2.png" 1742834908.1813 45041 550ea1e6c43a86aa16883762990d2d41 ""
   "images/menu.png" 1742838297.75003 102105 29a9370f57b189ca764d68b059a28515 ""
@@ -82,8 +83,10 @@
   "images/menu_option_6_2.png" 1742838883.47131 103024 a16de94413d2d0191c03f485c7cb809b ""
   "images/menu_option_7_1.png" 1742838892.21141 98864 44ee03c1dc4cb42cb3db45358b97aa63 ""
   "images/menu_option_7_2.png" 1742838903.19583 173519 4a3da9fdc21b42ad39ad0d9c9db64be0 ""
-  "project3.aux" 1742840557.71286 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
-  "project3.tex" 1742840555.02158 8931 85c192271cd2eacdf4149970175ed0c6 ""
+  "images/products_before.png" 1742840777.86173 150796 58d02a754a42e3e88724d6800a314553 ""
+  "images/updated_table_after_procedure_call.png" 1742837704.48087 147159 7ea03d79e19125b4f6a7e610fb7018d2 ""
+  "project3.aux" 1742841379.9035 32 1b174032087fb90900fa6203d3bb0a7e "pdflatex"
+  "project3.tex" 1742841375.60243 9792 d47e4eedd0d02376a5d3413aabbc1a2b ""
   (generated)
   "project3.aux"
   "project3.log"
