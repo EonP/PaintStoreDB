@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.9.9)  20 MAR 2025 21:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2024.9.9)  24 MAR 2025 12:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -266,11 +266,6 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/idx1.png, id=1, 867.24pt x 55.20625pt>
-File: images/idx1.png Graphic file (type png)
-<use images/idx1.png>
-Package pdftex.def Info: images/idx1.png  used on input line 69.
-(pdftex.def)             Requested size: 407.66833pt x 25.95114pt.
 
 
 [1
@@ -282,31 +277,39 @@ File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 76.
-<images/idx2.png, id=13, 867.24pt x 55.20625pt>
-File: images/idx2.png Graphic file (type png)
-<use images/idx2.png>
-Package pdftex.def Info: images/idx2.png  used on input line 83.
+<images/idx1.png, id=11, 867.24pt x 55.20625pt>
+File: images/idx1.png Graphic file (type png)
+<use images/idx1.png>
+Package pdftex.def Info: images/idx1.png  used on input line 123.
 (pdftex.def)             Requested size: 407.66833pt x 25.95114pt.
 
 
-[2 <./images/idx1.png> <./images/idx2.png>] (project3.aux)
+[2]
+<images/idx2.png, id=18, 867.24pt x 55.20625pt>
+File: images/idx2.png Graphic file (type png)
+<use images/idx2.png>
+Package pdftex.def Info: images/idx2.png  used on input line 137.
+(pdftex.def)             Requested size: 407.66833pt x 25.95114pt.
+
+
+[3 <./images/idx1.png> <./images/idx2.png>] (project3.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6276 strings out of 475833
- 101746 string characters out of 2775593
- 1971957 words of memory out of 3000000
- 28870 multiletter control sequences out of 15000+600000
- 564787 words of font info for 59 fonts, out of 8000000 for 9000
+ 6307 strings out of 475833
+ 102149 string characters out of 2775593
+ 2116957 words of memory out of 3000000
+ 28900 multiletter control sequences out of 15000+600000
+ 565122 words of font info for 60 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
- 57i,6n,65p,480b,1655s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on project3.pdf (2 pages, 138473 bytes).
+ 57i,6n,65p,480b,1953s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk> </Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on project3.pdf (3 pages, 144975 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
+ 57 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

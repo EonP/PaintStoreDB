@@ -101,20 +101,21 @@ INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/font
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
-INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./images/idx1.png
-INPUT ./images/idx1.png
-INPUT ./images/idx1.png
-INPUT ./images/idx1.png
 OUTPUT project3.pdf
-INPUT ./images/idx1.png
-INPUT ./images/idx1.png
-INPUT ./images/idx1.png
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/omlcmr.fd
+INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./images/idx1.png
+INPUT ./images/idx1.png
+INPUT ./images/idx1.png
+INPUT ./images/idx1.png
+INPUT ./images/idx1.png
+INPUT ./images/idx1.png
+INPUT ./images/idx1.png
 INPUT ./images/idx2.png
 INPUT ./images/idx2.png
 INPUT ./images/idx2.png
@@ -123,6 +124,8 @@ INPUT ./images/idx2.png
 INPUT ./images/idx2.png
 INPUT ./images/idx2.png
 INPUT project3.aux
+INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
+INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk
 INPUT /Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb

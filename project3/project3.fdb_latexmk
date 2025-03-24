@@ -1,9 +1,11 @@
 # Fdb version 4
-["pdflatex"] 1742520619.05758 "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" "project3.pdf" "project3" 1742520619.60183 0
-  "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" 1742520618.4947 4674 9b25bb341740c9d23cebbcadc27fd864 ""
+["pdflatex"] 1742834878.12035 "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" "project3.pdf" "project3" 1742834878.75671 0
+  "/Users/leonpetrinos/Desktop/McGill/Winter/COMP-421/PaintStoreDB/project3/project3.tex" 1742834877.52515 6523 c3a9dcbdc2c497604a13db43f574ce46 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map" 1741344772.23469 257736 76236fbb88cdff087d33a22d0cdafc1a ""
+  "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1725919329.82714 11548 daa06c41e1740e9ab9ff0faf05960a70 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1095.pk" 1727400590.89579 12668 250aa4305f8bd3b17df54abe14a3acad ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1725919255.61631 21088897 61439be112e7617c37ddfd21e9465f2a ""
+  "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1725918657.588 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1725918657.58814 1460 8005ce585ff351dff78998923504da5e ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1725918643.95831 1004 54797486969f23fa377b128694d548df ""
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1725918643.95848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -63,8 +65,8 @@
   "/Users/leonpetrinos/Library/Application Support/MiKTeX/texmfs/install/tex/latex/placeins/placeins.sty" 1741344771.37481 4087 636308456f60d2b31cbf97867db5708d ""
   "images/idx1.png" 1742516787.26279 44475 aac42bc31612780f5045a6099d4d7ad6 ""
   "images/idx2.png" 1742520471.78019 45041 550ea1e6c43a86aa16883762990d2d41 ""
-  "project3.aux" 1742520619.5158 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
-  "project3.tex" 1742520618.4947 4674 9b25bb341740c9d23cebbcadc27fd864 ""
+  "project3.aux" 1742834878.6554 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "project3.tex" 1742834877.52515 6523 c3a9dcbdc2c497604a13db43f574ce46 ""
   (generated)
   "project3.aux"
   "project3.log"
