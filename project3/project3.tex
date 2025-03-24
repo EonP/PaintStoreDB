@@ -91,6 +91,10 @@
                 ON cp.purchase_id = pur.p_id
                 WHERE cp.product_id = current_pid
                     AND pur.p_date >= CURRENT DATE - 6 MONTHS
+            ) OR NOT EXISTS (
+                SELECT 1
+                FROM Contains_purchase cp
+                WHERE cp.product_id = current_pid
             ) THEN
                 IF (current_discount + 10 > max_discount) THEN
                     SET current_discount = max_discount;
@@ -111,10 +115,14 @@
     END
     \end{lstlisting}
     
-    \item Calling the procedure: 
-    Products with ids less than 25 before calling procedure: 
-    Products with ids less than 25 after calling procedure:
+    \item 
 \end{enumerate}
+Calling the procedure\\
+\includegraphics*[width=\textwidth]{images/call_to_procedure.png}
+First 25 before calling procedure:\\
+\includegraphics*[width=\textwidth]{images/products_before.png}
+Products with ids less than 25 after calling procedure:\\
+\includegraphics*[width=\textwidth]{images/updated_table_after_procedure_call.png}
 
 \section*{Application Program}
 
