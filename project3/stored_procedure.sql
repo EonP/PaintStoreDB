@@ -1,3 +1,5 @@
+CONNECT TO COMP421$
+
 CREATE OR REPLACE PROCEDURE DiscountInactiveProducts(IN max_discount INT)
     BEGIN
         DECLARE done INT DEFAULT 0;
@@ -24,7 +26,10 @@ CREATE OR REPLACE PROCEDURE DiscountInactiveProducts(IN max_discount INT)
             ) AND NOT EXISTS (
                 SELECT 1
                 FROM Contains_purchase cp
+                JOIN Purchase pur
+                ON cp.p_id = pur.p_id
                 WHERE cp.product_id = current_pid
+                    AND pur.p_date >= CURRENT DATE - 6 MONTHS
             )) 
             THEN
                 IF (current_discount + 10 > max_discount) THEN
