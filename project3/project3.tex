@@ -197,9 +197,100 @@ Let's discuss what each option does:
 
 \subsection*{Vis 1}
 
+The following chart represents the daily amount of paint sold during the first 7 days of March (01.03.2025 - 07.03.2025).
+
+\includegraphics[width=0.9\textwidth]{images/Vis1.png}
+
+The query used to find the data :
+\newline
+
+\noindent\texttt{
+SELECT PURCHASE.p\_date, SUM(CONTAINS\_PURCHASE.quantity)\\
+FROM PAINT \\
+JOIN CONTAINS\_PURCHASE ON CONTAINS\_PURCHASE.product\_id = PAINT.p\_id\\
+JOIN PURCHASE ON CONTAINS\_PURCHASE.purchase\_id = PURCHASE.p\_id\\
+GROUP BY PURCHASE.p\_date\\
+HAVING '2025-03-01' <= PURCHASE.p\_date \\
+AND PURCHASE.p\_date <= '2025-03-07';
+}
+
 \subsection*{Vis 2}
 
+The following chart represent the amount of money made by each store for online and in-store purchases during the first 7 days of March (01.03.2025 - 07.03.2025).
+
+\includegraphics[width=0.9\textwidth]{images/Vis2.png}
+
+The query used to find the data :
+\newline
+
+\noindent\texttt{
+WITH TEMP\_INSTORE AS (\\
+SELECT STORE.s\_id, s\_address, COALESCE(SUM(amount), 0) AS total\_amount\\
+FROM STORE\\
+LEFT JOIN EMPLOYEE ON STORE.s\_id = EMPLOYEE.s\_id\\
+LEFT JOIN INSTORE ON EMPLOYEE.e\_id = INSTORE.e\_id\\
+LEFT JOIN PURCHASE ON INSTORE.p\_id = PURCHASE.p\_id AND '2025-03-01' <= PURCHASE.p\_date AND PURCHASE.p\_date <= '2025-03-07'\\
+GROUP BY STORE.s\_id , s\_address\\
+),\\
+TEMP\_ONLINE AS (\\
+SELECT STORE.s\_id, s\_address, COALESCE(SUM(amount), 0) AS total\_amount\\
+FROM STORE\\
+LEFT JOIN ONLINE ON STORE.s\_id = ONLINE.s\_id\\
+LEFT JOIN PURCHASE ON ONLINE.p\_id = PURCHASE.p\_id  AND '2025-03-01' <= PURCHASE.p\_date AND PURCHASE.p\_date <= '2025-03-07'\\
+GROUP BY STORE.s\_id, s\_address\\
+)\\
+SELECT TEMP\_INSTORE.s\_id, TEMP\_INSTORE.s\_address, \\
+TEMP\_INSTORE.total\_amount AS instore\_amount, TEMP\_ONLINE.total\_amount AS online\_amount\\
+FROM TEMP\_INSTORE\\
+LEFT JOIN TEMP\_ONLINE ON TEMP\_INSTORE.s\_id = TEMP\_ONLINE.s\_id\\
+ORDER BY TEMP\_INSTORE.s\_id ASC;
+}
+
 \section*{Creativity}
+
+\begin{enumerate}[label=\alph*)]
+
+\item For this section, we chose to write a trigger. The trigger gives a 10\% discount on online purchases for 
+clients that have already made at least 10 online purchases in the last 30 days.
+
+\item \texttt{ \\
+CREATE OR REPLACE TRIGGER eligibleForDiscount AFTER INSERT ON ONLINE\\
+REFERENCING NEW AS n\\
+FOR EACH ROW \\
+BEGIN\\
+    DECLARE date\_cutoff DATE;\\
+    DECLARE count INTEGER;\\
+    \\
+    SELECT PURCHASE.p\_date - 30 DAYS\\
+    INTO date\_cutoff\\
+    FROM PURCHASE\\
+    WHERE PURCHASE.p\_id = n.p\_id;\\
+    \\
+    SELECT COUNT(*) \\
+    INTO count\\
+    FROM ONLINE JOIN PURCHASE\\
+    ON ONLINE.p\_id = PURCHASE.p\_id AND email = n.email AND date\_cutoff <= PURCHASE.p\_date;\\
+    \\
+    IF (count > 10)\\
+    THEN\\
+        UPDATE PURCHASE\\
+        SET amount = 0.9 * amount\\
+        WHERE PURCHASE.p\_id = n.p\_id;\\
+    END IF;\\
+END;
+}
+
+\item The client Lisa Brown with email (primary key) "lisa.brown@example.com" has already made 10 online purchase 
+in the month preceding 2025-03-07. 
+The insertion of the corresponding entries in the database is not shown here.
+
+We insert the entries for Brown's 11th online purchase on 2025-03-07 and query the amount for this purchase :
+
+\includegraphics[width=0.9\textwidth]{images/Trigger.png}
+
+The amount returned by the query (138.42 CAD) corresponds to 90\% of the amount inserted (153.81 CAD) as expected.
+
+\end{enumerate}
 
 \section*{Work Division}
 We had two meetings to discuss the project and the work division. We decided to divide the work as follows:
